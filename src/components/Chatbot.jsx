@@ -155,15 +155,14 @@ const Chatbot = () => {
         };
 
         const response = await axios.post(
-        `${API_BASE_URL}/api/public/chatbot/`, 
+        `${API_BASE_URL}/public/chatbot/`, 
         payload,
         {
-            headers: {
-            'Content-Type': 'application/json',
-            },
+            headers: { 'Content-Type': 'application/json' },
             timeout: parseInt(API_TIMEOUT),
         }
         );
+
         
         return response.data;
     } catch (error) {
