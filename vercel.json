@@ -4,5 +4,16 @@
       "source": "/api/:path*",
       "destination": "http://20.245.156.26/AICSAP-BE/:path*"
     }
+  ],
+  "headers": [
+    {
+      "source": "/api/:path*",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Credentials",
+          "value": "true"
+        }
+      ]
+    }
   ]
 }
